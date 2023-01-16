@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, HStack } from "@chakra-ui/react";
+import { Box, Text, Flex, Heading, HStack, Button } from "@chakra-ui/react";
 import Image from "next/image";
 
 const LandingPage = () => {
@@ -14,22 +14,31 @@ const LandingPage = () => {
       bgSize="cover"
     >
       <Flex
-        height="90vh"
         width="100%"
         backgroundImage={`linear-gradient(${gradient})`}
       >
-        <Box height="90vh" width="100%">
+        <Box height="90vh" width="100%" marginTop="200px">
           <HStack display="flex" justifyContent="space-between">
-            <Heading variant="title">
-              Power your future, <br /> be an eestecer
-            </Heading>
+            <Flex flexDir={"column"} alignItems={"baseline"} paddingLeft="150px">
+              <Heading variant="title">
+                Power your future, <br /> be an eestecer
+              </Heading>
 
-            <Image
-              width={400}
-              height={400}
-              src="/images/mk-map.png"
-              alt="eestec map"
-            />
+              <Text variant="white">
+                Invoking Passion, Pursuing Development, Empowering Collaboration
+              </Text>
+            </Flex>
+
+            <Flex flexDir={"column"} paddingRight="150px">
+              <Image
+                width={500}
+                height={500}
+                src="/images/mk-map.png"
+                alt="eestec map"
+              />
+
+              <Button alignSelf={"flex-end"} width={"max-content"} mt="50px">JOIN US</Button>
+            </Flex>
           </HStack>
         </Box>
       </Flex>
