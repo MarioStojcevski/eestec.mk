@@ -1,6 +1,7 @@
 import Header from "../components/shared/header";
 import LandingPage from "../components/landing-page";
 import Statistics from "../components/statistics";
+import MissionVision from "../components/mission-vision";
 
 const Home = () => {
   return (
@@ -8,6 +9,8 @@ const Home = () => {
       <Header />
 
       <LandingPage />
+
+      <MissionVision/>
 
       <Statistics />
 
