@@ -1,5 +1,16 @@
+import Header from "../components/shared/header";
+import LandingPage from "../components/landing-page";
+
 const Home = () => {
-  return <p>homepage</p>;
+  return (
+    <>
+      <Header />
+
+      <LandingPage />
+
+      
+    </>
+  );
 };
 
 export default Home;
