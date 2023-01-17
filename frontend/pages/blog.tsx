@@ -1,8 +1,12 @@
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import Header from "../components/shared/header";
 
 const Blog = () => {
   return (
-    <Flex
+    <>
+      <Header />
+      
+      <Flex
       width="100vw"
       height="100vh"
       bgColor="primary"
@@ -19,7 +23,7 @@ const Blog = () => {
           <a href="/">Go back</a>
         </Text>
       </VStack>
-    </Flex>
+    </Flex></>
   );
 };
 

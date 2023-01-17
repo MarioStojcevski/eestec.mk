@@ -24,7 +24,7 @@ const LandingPage = () => {
                 Power your future, <br /> be an eestecer
               </Heading>
 
-              <Text variant="white">
+              <Text variant="whiteBig">
                 Invoking Passion, Pursuing Development, Empowering Collaboration
               </Text>
             </Flex>

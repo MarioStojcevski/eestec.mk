@@ -1,10 +1,15 @@
 import Header from "../shared/header";
 
-const UnauthenticatedLayout = ({ children }) => {
+type LayoutProps = {
+  children: React.ReactNode;
+}
+
+const UnauthenticatedLayout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      
+      <main >{children}</main>
     </>
   );
 };
