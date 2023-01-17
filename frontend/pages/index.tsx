@@ -14,9 +14,9 @@ const Home = () => {
 
       <Statistics />
       
-      <BlogShowcase />
-
       <MakingMemories />
+
+      <BlogShowcase />
 
       <MeetTheBoard />
     </>
