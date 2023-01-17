@@ -7,89 +7,89 @@ const Statistics = () => {
     return (
         <Box
             bgColor="white"
-            height="90vh"
+            height="65vh"
         >
             <HStack spacing={8} w='full' p='10%'>
                 <Stack  direction='column' w='full'>
                     <Center>
-                        <Circle size={{ base: '10', md: '16' }} bg='primary' color='white'>
+                        <Circle size={{ base: '10', md: '16', lg: '36' }} bg='primary' color='white'>
                             <Image
-                                h={10}
+                                h={{ base: '5', md: '10', lg: '20' }}
                                 src="/images/icon_calendar.png"
                                 alt="calendar"
                             />
                     </Circle>
                     </Center>
                     <Center>
-                        <Heading variant='h1'>
+                        <Heading variant={{ base: 'h4', md: 'h1' }}>
                             100+
                         </Heading>
                     </Center>
                     <Center>
-                        <Heading variant='h5'>
+                        <Heading variant={{ base: 'h5', md: 'h5', lg: 'h3' }}>
                             Events
                         </Heading>
                     </Center>
                 </Stack>
                 <Stack  direction='column' w='full'>
                     <Center>
-                        <Circle size={{ base: '10', md: '16' }} bg='primary' color='white'>
+                        <Circle size={{ base: '10', md: '16', lg: '36' }} bg='primary' color='white'>
                             <Image
-                                h={10}
+                                h={{ base: '5', md: '10', lg: '20' }}
                                 src="/images/icon_glass.png"
                                 alt="calendar"
                             />
                     </Circle>
                     </Center>
                     <Center>
-                        <Heading variant='h1'>
+                        <Heading variant={{ base: 'h4', md: 'h1' }}>
                             400+
                         </Heading>
                     </Center>
                     <Center>
-                        <Heading variant='h5'>
+                        <Heading variant={{ base: 'h5', md: 'h5', lg: 'h3' }}>
                             Students
                         </Heading>
                     </Center>
                 </Stack>
                 <Stack  direction='column' w='full'>
                     <Center>
-                        <Circle size={{ base: '10', md: '16' }} bg='primary' color='white'>
+                        <Circle size={{ base: '10', md: '16', lg: '36' }} bg='primary' color='white'>
                             <Image
-                                h={10}
+                                h={{ base: '5', md: '10', lg: '20' }}
                                 src="/images/icon_handshake.png"
                                 alt="calendar"
                             />
                     </Circle>
                     </Center>
                     <Center>
-                        <Heading variant='h1'>
+                        <Heading variant={{ base: 'h4', md: 'h1' }}>
                             30+
                         </Heading>
                     </Center>
                     <Center>
-                        <Heading variant='h5'>
+                        <Heading variant={{ base: 'h5', md: 'h5', lg: 'h3' }}>
                             Partners
                         </Heading>
                     </Center>
                 </Stack>
                 <Stack  direction='column' w='full'>
                     <Center>
-                        <Circle size={{ base: '10', md: '16' }} bg='primary' color='white'>
+                        <Circle size={{ base: '10', md: '16', lg: '36' }} bg='primary' color='white'>
                             <Image
-                                h={10}
+                                h={{ base: '5', md: '10', lg: '20' }}
                                 src="/images/icon_people.png"
                                 alt="calendar"
                             />
                     </Circle>
                     </Center>
                     <Center>
-                        <Heading variant='h1'>
+                        <Heading variant={{ base: 'h4', md: 'h1' }}>
                             200+
                         </Heading>
                     </Center>
                     <Center>
-                        <Heading variant='h5'>
+                        <Heading variant={{ base: 'h5', md: 'h5', lg: 'h3' }}>
                             Memories
                         </Heading>
                     </Center>
