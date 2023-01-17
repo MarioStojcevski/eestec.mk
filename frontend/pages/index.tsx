@@ -1,5 +1,6 @@
 import Header from "../components/shared/header";
 import LandingPage from "../components/landing-page";
+import MakingMemories from "../components/making-memories";
 
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
 
       <LandingPage />
 
-      
+      <MakingMemories />
     </>
   );
 };
