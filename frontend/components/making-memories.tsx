@@ -1,18 +1,27 @@
 import { Box, Grid, Heading, VStack, GridItem } from "@chakra-ui/react";
 
 const MakingMemories = () => {
+  const memoryData = [
+    { id: 1, imageUrl: "/images/memories/memory1.jpeg" },
+    { id: 2, imageUrl: "/images/memories/memory2.jpeg" },
+    { id: 3, imageUrl: "/images/memories/memory3.jpeg" },
+    { id: 4, imageUrl: "/images/memories/memory4.jpeg" },
+    { id: 5, imageUrl: "/images/memories/memory5.jpeg" },
+    { id: 6, imageUrl: "/images/memories/memory6.jpeg" },
+  ];
   return (
-    <VStack w="full" padding="106px">
-      <Heading fontSize="50px" textTransform="uppercase" mb="60px">
+    <VStack w="full" pt={"5%"} pb={"5%"}>
+      <Heading mb={"50px"} variant={"h2"}>
         Making memories since 2003
       </Heading>
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-        {Array.from({ length: 6 }).map((_, i) => (
-          <GridItem key={i} w="330px" h="330px">
+        {memoryData.map((memory) => (
+          <GridItem key={memory.id} w="330px" h="330px">
             <Box
+              backgroundImage={`url(${memory.imageUrl})`}
+              backgroundSize={"cover"}
               w="full"
               h="full"
-              background="conic-gradient(from 180deg at 50% 50%, #D9D9D9 0deg, rgba(217, 217, 217, 0) 360deg);"
               border="5px solid #FFFFFF"
               shadow="lg"
             />

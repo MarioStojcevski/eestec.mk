@@ -9,6 +9,16 @@ export const TextStyles: ComponentStyleConfig = {
     black: {
       textColor: "black",
     },
+    whiteBig: {
+      textColor: "white",
+      textShadow: "1px 1px #282828",
+      fontSize: "20px",
+    },
+    blackBig: {
+      textColor: "black",
+      textShadow: "1px 1px #282828",
+      fontSize: "20px",
+    },
   },
   // default values for 'size'
   defaultProps: {
