@@ -7,19 +7,15 @@ const LandingPage = () => {
 
   return (
     <Flex
-      height="90vh"
       bgImage={`url(${imageUrl})`}
       bgRepeat="no-repeat"
       bgPosition="center"
       bgSize="cover"
     >
-      <Flex
-        width="100%"
-        backgroundImage={`linear-gradient(${gradient})`}
-      >
-        <Box height="90vh" width="100%" marginTop="200px">
+      <Flex width={"100%"} backgroundImage={`linear-gradient(${gradient})`}>
+        <Box margin={"auto"} height="90vh">
           <HStack display="flex" justifyContent="space-between">
-            <Flex flexDir={"column"} alignItems={"baseline"} paddingLeft="150px">
+            <Flex flexDir={"column"} alignItems={"baseline"}>
               <Heading variant="title">
                 Power your future, <br /> be an eestecer
               </Heading>
@@ -29,15 +25,22 @@ const LandingPage = () => {
               </Text>
             </Flex>
 
-            <Flex flexDir={"column"} paddingRight="150px">
+            <Flex flexDir={"column"}>
               <Image
                 width={500}
                 height={500}
-                src="/images/mk-map.png"
+                src="/images/mk-map.svg"
                 alt="eestec map"
               />
 
-              <Button alignSelf={"flex-end"} width={"max-content"} mt="50px">JOIN US</Button>
+              <Button
+                onClick={() => alert("Hold your horses. Feature coming soon!")}
+                alignSelf={"flex-end"}
+                width={"max-content"}
+                mt="50px"
+              >
+                JOIN US
+              </Button>
             </Flex>
           </HStack>
         </Box>

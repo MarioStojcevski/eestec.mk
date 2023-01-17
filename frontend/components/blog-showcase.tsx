@@ -12,138 +12,68 @@ import {
 import { useRouter } from "next/router";
 
 const BlogShowcase = () => {
+  const blogShowcaseData = [
+    {
+      id: 1,
+      title: "Design Sprint",
+      description:
+        "It is time for another fun event organized by EESTEC LC Eskisehir and that is the 8th Design Sprint...",
+      imageUrl: "/images/blog-showcase/design-sprint.png",
+    },
+    {
+      id: 2,
+      title: "Personal Development Hub",
+      description:
+        "The main idea for this event is series of training session aimed for developing ourselves...",
+      imageUrl: "/images/blog-showcase/personal-dev.png",
+    },
+    {
+      id: 3,
+      title: "What does it mean to be an EESTECer",
+      description:
+        "“The opportunity for self-improvement through the non-formal education offered by this wonderful organization”",
+      imageUrl: "/images/blog-showcase/eestec-lc-skopje.png",
+    },
+  ];
+
   const router = useRouter();
 
   return (
-    <Flex h="100vh">
-      <Flex
-        fontFamily="Roboto"
-        textAlign="justify"
-        flexDirection="column"
-        verticalAlign="middle"
-        margin="auto"
-      >
-        <Heading variant="h2" textAlign="center">
+    <Flex h="100vh" pt={"5%"}>
+      <Flex flexDirection="column">
+        <Heading mb={"50px"} variant="h2" textAlign="center">
           Blog
         </Heading>
 
-        <Grid
-          marginTop="20px"
-          marginBottom="20px"
-          w="100%"
-          gap={6}
-          templateColumns="repeat(3, 1fr)"
-        >
-          <GridItem>
-            <Card padding="20px" h="60vh">
-              <VStack h="100%" spacing={5} align="stretch">
-                <Box
-                  paddingBottom="70%"
-                  bgGradient="conic-gradient(from 0.50turn at 50% 50%, rgba(218, 218, 218, 0),  rgba(218, 218, 218, 1));"
-                />
+        <Grid marginBottom="20px" gap={6} templateColumns="repeat(3, 1fr)">
+          {blogShowcaseData.map((blogShowcase) => (
+            <GridItem key={blogShowcase.id}>
+              <Card padding="20px" h="60vh">
+                <VStack h="100%" spacing={5} align="stretch">
+                  <Box
+                    paddingBottom="70%"
+                    backgroundImage={`url(${blogShowcase.imageUrl})`}
+                    backgroundSize={"cover"}
+                  />
 
-                <Heading variant="h4" textTransform="uppercase">
-                  Title
-                </Heading>
-                <Text
-                  textAlign="justify"
-                  overflowX="hidden"
-                  overflowY="auto"
-                  paddingRight="10px"
-                >
-                  Lorem ipsum dolor sit amet consectetur. Eu ligula tellus nisi
-                  nunc ut rhoncus. Fermentum nunc est tellus quis mattis
-                  elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.
-                </Text>
-              </VStack>
-            </Card>
-          </GridItem>
-          <GridItem>
-            <Card padding="20px" h="60vh">
-              <VStack h="100%" spacing={5} align="stretch">
-                <Box
-                  paddingBottom="70%"
-                  bgGradient="conic-gradient(from 0.50turn at 50% 50%, rgba(218, 218, 218, 0),  rgba(218, 218, 218, 1));"
-                />
-
-                <Heading variant="h4" textTransform="uppercase">
-                  Title
-                </Heading>
-                <Text
-                  textAlign="justify"
-                  overflowX="hidden"
-                  overflowY="auto"
-                  paddingRight="10px"
-                >
-                  Lorem ipsum dolor sit amet consectetur. Eu ligula tellus nisi
-                  nunc ut rhoncus. Fermentum nunc est tellus quis mattis
-                  elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.
-                </Text>
-              </VStack>
-            </Card>
-          </GridItem>
-
-          <GridItem>
-            <Card padding="20px" h="60vh">
-              <VStack h="100%" spacing={5} align="stretch">
-                <Box
-                  paddingBottom="70%"
-                  bgGradient="conic-gradient(from 0.50turn at 50% 50%, rgba(218, 218, 218, 0),  rgba(218, 218, 218, 1));"
-                />
-
-                <Heading variant="h4" textTransform="uppercase">
-                  Title
-                </Heading>
-                <Text
-                  textAlign="justify"
-                  overflowX="hidden"
-                  overflowY="auto"
-                  paddingRight="10px"
-                >
-                  Lorem ipsum dolor sit amet consectetur. Eu ligula tellus nisi
-                  nunc ut rhoncus. Fermentum nunc est tellus quis mattis
-                  elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.Lorem ipsum dolor sit amet consectetur. Eu ligula
-                  tellus nisi nunc ut rhoncus. Fermentum nunc est tellus quis
-                  mattis elementum nec praesent vel. Pellentesque quis a vel
-                  pellentesque et amet tellus mauris. Amet nullam hendrerit vel
-                  aliquet id.
-                </Text>
-              </VStack>
-            </Card>
-          </GridItem>
+                  <Heading variant="h4" textTransform="uppercase">
+                    {blogShowcase.title}
+                  </Heading>
+                  <Text
+                    textAlign="justify"
+                    overflowX="hidden"
+                    overflowY="hidden"
+                    paddingRight="10px"
+                  >
+                    {blogShowcase.description}
+                  </Text>
+                </VStack>
+              </Card>
+            </GridItem>
+          ))}
         </Grid>
 
-        <Button
-          alignSelf="end"
-          w="fit-content"
-          onClick={() => router.replace("/blog")}
-        >
+        <Button alignSelf="end" onClick={() => router.replace("/blog")}>
           See More
         </Button>
       </Flex>
