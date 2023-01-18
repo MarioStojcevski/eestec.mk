@@ -41,7 +41,7 @@ const Partners = () => {
                   <Image
                     width={150}
                     height={150}
-                    alt=""
+                    alt={`${partner.name}`}
                     src={`${partner.imageUrl}`}
                   ></Image>
                 </Box>
@@ -63,7 +63,7 @@ const Partners = () => {
                   <Image
                     width={150}
                     height={150}
-                    alt=""
+                    alt={`${supporter.name}`}
                     src={`${supporter.imageUrl}`}
                   ></Image>
                 </Box>
