@@ -2,8 +2,7 @@ import Statistics from "../components/statistics";
 import MeetTheBoard from "../components/meet-the-board";
 import BlogShowcase from "../components/blog-showcase";
 import MakingMemories from "../components/making-memories";
-import MissionVision from "../components/mission-vision";
-import Sponsorship from "../components/sponsorship";
+import Partners from "../components/partners";
 
 const Home = () => {
   return (
@@ -15,8 +14,8 @@ const Home = () => {
       <BlogShowcase />
 
       <MeetTheBoard />
-      
-      <Sponsorship />
+
+      <Partners />
     </>
   );
 };
