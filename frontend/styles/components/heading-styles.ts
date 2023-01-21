@@ -19,8 +19,16 @@ export const HeadingStyles: ComponentStyleConfig = {
     h2: {
       fontSize: "40px",
     },
+    h2white: {
+      fontSize: "40px",
+      color: "white",
+    },
     h3: {
       fontSize: "30px",
+    },
+    h3white: {
+      fontSize: "30px",
+      color: "white",
     },
     h4: {
       textColor: "primary",
