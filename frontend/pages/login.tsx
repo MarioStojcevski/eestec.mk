@@ -6,11 +6,11 @@ import {
   Link,
   Heading,
   VStack,
-  Box,
   FormControl,
   FormLabel,
   FormHelperText,
   Input,
+  Card,
 } from "@chakra-ui/react";
 
 const Login = () => {
@@ -18,13 +18,15 @@ const Login = () => {
     <Center bg="white">
       <VStack w={{ base: "90%", md: "55%", lg: "40%" }} mb="200">
         <Center mb="50"></Center>
-        <Box
+        <Card
           boxShadow="dark-lg"
           bg="white"
           border="2px"
           borderColor="primary"
           p="6"
           rounded="lg"
+          maxH='60vh'
+          w='60vh'
         >
           <Heading
             variant={{ base: "h5", md: "h4" }}
@@ -51,7 +53,7 @@ const Login = () => {
             </FormHelperText>
           </FormControl>
 
-          <FormControl textAlign="left" ml="25%" mb="10">
+          <FormControl textAlign="left" ml="25%" mb="7">
             <FormLabel fontSize={{ base: "12px", md: "16px" }}>
               Password
             </FormLabel>
@@ -70,15 +72,16 @@ const Login = () => {
 
           <Stack justify="center" spacing="4">
             <Text as="div" textAlign="left">
-              <Center fontSize={{ base: "10px", md: "14px" }} mb="1.5">
-                <Link color="primary" variant="link" mr="10" ml="5">
-                  Forgot password
-                </Link>
-                <Button mr="5" ml="5">
+              <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
+                <Button w='50%' mr='5' ml='5'>
                   LOG IN
                 </Button>
               </Center>
-              <br />
+              <Center fontSize={{base: '10px', md: '14px'}} mb='1.5'>
+                <Link color="primary" variant="link">
+                  Forgot password
+                </Link>
+              </Center>
               <Center mb="3" fontSize={{ base: "10px", md: "14px" }}>
                 <span> Don&lsquo;t have an account? &nbsp;</span>
                 <Link color="primary" variant="link">
@@ -87,7 +90,7 @@ const Login = () => {
               </Center>
             </Text>
           </Stack>
-        </Box>
+        </Card>
       </VStack>
     </Center>
   );
