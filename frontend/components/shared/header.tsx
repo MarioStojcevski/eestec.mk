@@ -81,6 +81,28 @@ const Header = () => {
             Blog
           </Text>
         </Link>
+
+        <Link href="/login" marginLeft="10px">
+          <Text
+            textTransform="uppercase"
+            fontSize={18}
+            color="primary"
+            _hover={{ textDecoration: "underline" }}
+          >
+            Login
+          </Text>
+        </Link>
+
+        <Link href="/register" marginLeft="10px">
+          <Text
+            textTransform="uppercase"
+            fontSize={18}
+            color="primary"
+            _hover={{ textDecoration: "underline" }}
+          >
+            Register
+          </Text>
+        </Link>
       </Flex>
     </Flex>
   );
