@@ -21,7 +21,7 @@ import React, { useState } from 'react';
 const Login = () =>{
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const handleSubmit = (event: { preventDefault: () => void; }) => {
+  const loginHandler = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
     console.log(`Email: ${email}\nPassword: ${password}`);
   }
@@ -50,7 +50,7 @@ const Login = () =>{
             Sign in
           </Heading>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={loginHandler}>
             <FormControl isRequired textAlign="left" ml="25%" mb="5">
               <FormLabel fontSize={{ base: "12px", md: "16px" }}>Email</FormLabel>
 
