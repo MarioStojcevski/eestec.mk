@@ -11,9 +11,21 @@ import {
   FormHelperText,
   Input,
   Card,
+  Box,
+  Alert,
+  AlertIcon,
+  AlertDescription
 } from "@chakra-ui/react";
+import React, { useState } from 'react';
 
-const Login = () => {
+const Login = () =>{
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const handleSubmit = (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    console.log(`Email: ${email}\nPassword: ${password}`);
+  }
+
   return (
     <Center bg="white">
       <VStack w={{ base: "90%", md: "55%", lg: "40%" }} mb="200">
@@ -38,45 +50,52 @@ const Login = () => {
             Sign in
           </Heading>
 
-          <FormControl textAlign="left" ml="25%" mb="5">
-            <FormLabel fontSize={{ base: "12px", md: "16px" }}>Email</FormLabel>
+          <form onSubmit={handleSubmit}>
+            <FormControl isRequired textAlign="left" ml="25%" mb="5">
+              <FormLabel fontSize={{ base: "12px", md: "16px" }}>Email</FormLabel>
 
-            <Input
-              type="email"
-              w="50%"
-              boxShadow="inner"
-              fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-            />
+              <Input
+                type="email"
+                placeholder='email@mail.com'
+                w="50%"
+                boxShadow="inner"
+                fontSize={{ base: "12px", md: "14px", lg: "16px" }}
+                onChange={event => setEmail(event.currentTarget.value)}
+              />
 
-            <FormHelperText hidden={true}>
-              Please enter your email
-            </FormHelperText>
-          </FormControl>
+              <FormHelperText hidden={true}>
+                Please enter your email
+              </FormHelperText>
+            </FormControl>
 
-          <FormControl textAlign="left" ml="25%" mb="7">
-            <FormLabel fontSize={{ base: "12px", md: "16px" }}>
-              Password
-            </FormLabel>
+            <FormControl isRequired textAlign="left" ml="25%" mb="7" >
+              <FormLabel fontSize={{ base: "12px", md: "16px" }}>
+                Password
+              </FormLabel>
 
-            <Input
-              type="password"
-              w="50%"
-              boxShadow="inner"
-              fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-            />
+              <Input
+                type="password"
+                placeholder="*******"
+                w="50%"
+                boxShadow="inner"
+                fontSize={{ base: "12px", md: "14px", lg: "16px" }}
+                onChange={event => setPassword(event.currentTarget.value)}
+              />
 
-            <FormHelperText hidden={true}>
-              Please enter your password
-            </FormHelperText>
-          </FormControl>
+              <FormHelperText hidden={true}>
+                Please enter your password
+              </FormHelperText>
+            </FormControl>
 
-          <Stack justify="center" spacing="4">
-            <Text as="div" textAlign="left">
-              <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
-                <Button w='50%' mr='5' ml='5'>
+            <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
+                <Button type='submit' w='50%' mr='5' ml='5'>
                   LOG IN
                 </Button>
               </Center>
+          </form>
+
+          <Stack justify="center" spacing="4">
+            <Text as="div" textAlign="left">
               <Center fontSize={{base: '10px', md: '14px'}} mb='1.5'>
                 <Link color="primary" variant="link">
                   Forgot password
