@@ -8,12 +8,14 @@ const Header = () => {
 
   return (
     <Flex
+      bg="#ffffff"
       width="100%"
       height={20}
       pl={10}
       pr={10}
       alignItems="center"
       justifyContent="space-between"
+      boxShadow="0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);"
     >
       <Flex width="33.33%" justifyContent="flex-start">
         <IconButton
