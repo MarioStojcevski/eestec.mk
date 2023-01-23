@@ -6,6 +6,7 @@ import WhyYouShouldJoin from "../components/why-you-should-join";
 import Partners from "../components/partners";
 import MissionVision from "../components/mission-vision";
 import LandingPage from "../components/landing-page";
+import Footer from "../components/shared/footer";
 
 const Home = () => {
   return (
