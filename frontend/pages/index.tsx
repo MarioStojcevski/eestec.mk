@@ -4,11 +4,16 @@ import BlogShowcase from "../components/blog-showcase";
 import MakingMemories from "../components/making-memories";
 import WhyYouShouldJoin from "../components/why-you-should-join";
 import Partners from "../components/partners";
-import Footer from "../components/shared/footer";
+import MissionVision from "../components/mission-vision";
+import LandingPage from "../components/landing-page";
 
 const Home = () => {
   return (
     <>
+      <LandingPage />
+
+      <MissionVision />
+
       <Statistics />
 
       <WhyYouShouldJoin />
