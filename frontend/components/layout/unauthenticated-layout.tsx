@@ -9,10 +9,9 @@ type LayoutProps = {
 };
 
 const UnauthenticatedLayout = ({ children }: LayoutProps) => {
-  const { pathname } = useRouter();
   return (
     <>
-      <Header />
+      <main>{children}</main>
       {pathname !== "/blog" && <LandingPage />}
       {pathname !== "/blog" && <MissionVision />}
       <main style={{ width: "80%", margin: "auto" }}>{children}</main>

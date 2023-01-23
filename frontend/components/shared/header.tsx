@@ -54,7 +54,7 @@ const Header = () => {
       </Flex>
       <Flex width="33.33%" justifyContent="center">
         <Image
-          src="/../public/images/eestec-logo.png"
+          src="/images/eestec-logo.png"
           width={100}
           height={100}
           alt="eestec lc skopje"
