@@ -34,12 +34,12 @@ const Login = () =>{
           <Heading
             variant={{ base: "h5", md: "h4" }}
             color={{ base: "primary", md: "primary" }}
-            textAlign="left"
+            textAlign="center"
             w="full"
-            mb="5"
+            mb="7"
             px='10'
           >
-            Sign in
+            Welcome back!
           </Heading>
 
           <form onSubmit={loginHandler}>
