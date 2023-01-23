@@ -6,13 +6,10 @@ import {
   Link,
   Heading,
   VStack,
-  FormControl,
-  FormLabel,
-  FormHelperText,
-  Input,
-  Card,
+  Card
 } from "@chakra-ui/react";
 import React, { useState } from 'react';
+import Field from "../components/forms/field";
 
 const Login = () =>{
   const [email, setEmail] = useState('');
@@ -24,64 +21,45 @@ const Login = () =>{
 
   return (
     <Center bg="white">
-      <VStack w={{ base: "90%", md: "55%", lg: "40%" }} mb="200">
-        <Center mb="50"></Center>
-        <Card
-          boxShadow="dark-lg"
-          bg="white"
-          border="2px"
-          borderColor="primary"
-          p="6"
-          rounded="lg"
-          maxH='60vh'
-          w='60vh'
-        >
+      <Card
+        boxShadow="dark-lg"
+        bg="white"
+        border="2px"
+        borderColor="primary"
+        p="6"
+        rounded="lg"
+        w='80vh'
+        mb="50"
+      >
           <Heading
             variant={{ base: "h5", md: "h4" }}
             color={{ base: "primary", md: "primary" }}
             textAlign="left"
-            ml="24.5%"
+            w="full"
             mb="5"
+            px='10'
           >
             Sign in
           </Heading>
 
           <form onSubmit={loginHandler}>
-            <FormControl isRequired textAlign="left" ml="25%" mb="5">
-              <FormLabel fontSize={{ base: "12px", md: "16px" }}>Email</FormLabel>
+          <Field
+              type="email"
+              name="Email"
+              label="Email"
+              placeholder="email@mail.com"
+              onChange={(event) => setEmail(event.target.value)}
+              helperText="Please enter your email"
+            />
 
-              <Input
-                type="email"
-                placeholder='email@mail.com'
-                w="50%"
-                boxShadow="inner"
-                fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-                onChange={event => setEmail(event.currentTarget.value)}
-              />
-
-              <FormHelperText hidden={true}>
-                Please enter your email
-              </FormHelperText>
-            </FormControl>
-
-            <FormControl isRequired textAlign="left" ml="25%" mb="7" >
-              <FormLabel fontSize={{ base: "12px", md: "16px" }}>
-                Password
-              </FormLabel>
-
-              <Input
-                type="password"
-                placeholder="*******"
-                w="50%"
-                boxShadow="inner"
-                fontSize={{ base: "12px", md: "14px", lg: "16px" }}
-                onChange={event => setPassword(event.currentTarget.value)}
-              />
-
-              <FormHelperText hidden={true}>
-                Please enter your password
-              </FormHelperText>
-            </FormControl>
+            <Field
+              type="password"
+              name="Password"
+              label="Password"
+              placeholder="Password"
+              onChange={(event) => setPassword(event.target.value)}
+              helperText="Please enter your password"
+            />
 
             <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
                 <Button type='submit' w='50%' mr='5' ml='5'>
@@ -105,8 +83,7 @@ const Login = () =>{
               </Center>
             </Text>
           </Stack>
-        </Card>
-      </VStack>
+      </Card>
     </Center>
   );
 };

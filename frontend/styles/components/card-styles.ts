@@ -1,6 +1,6 @@
 import { ComponentStyleConfig } from "@chakra-ui/react";
 
-export const TextStyles: ComponentStyleConfig = {
+export const CardStyles: ComponentStyleConfig = {
   // style object for variants
   variants: {
     authCard: {
