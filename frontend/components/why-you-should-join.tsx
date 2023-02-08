@@ -16,7 +16,7 @@ const WhyYouShouldJoin = () => {
         <VStack width="60%">
           <VStack alignItems="center" justifyContent="center">
             <Heading variant="h2">WHY YOU SHOULD JOIN US?</Heading>
-            <Image width={800} height={15} src="/images/line.png" alt="line" />
+            <Image width={800} height={15} src="/images/Line.png" alt="line" />
           </VStack>
           <HStack px={30}>
             <Box w="20%">
