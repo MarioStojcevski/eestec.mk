@@ -5,95 +5,86 @@ import {
   Center,
   Link,
   Heading,
-  VStack,
-  Box,
-  FormControl,
-  FormLabel,
-  FormHelperText,
-  Input,
+  Card
 } from "@chakra-ui/react";
-import { useSession, signIn } from "next-auth/react";
+import React, { useState } from 'react';
 import Header from "../components/shared/header";
+import InputField from "../components/shared/input-field";
 
-const Login = () => {
-  const { data: session } = useSession();
+const Login = () =>{
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const loginHandler = (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    console.log(`Email: ${email}\nPassword: ${password}`);
+  }
 
   return (
     <>
       <Header />
       
-      <Center bg="white">
-        <VStack w={{ base: "90%", md: "55%", lg: "40%" }} mb="200">
-          <Center mb="50"></Center>
-          <Box
-            boxShadow="dark-lg"
-            bg="white"
-            border="2px"
-            borderColor="primary"
-            p="6"
-            rounded="lg"
+      <Center bg="white" mt={5}>
+        <Card
+          boxShadow="dark-lg"
+          bg="white"
+          border="2px"
+          borderColor="primary"
+          p="6"
+          rounded="lg"
+          w='80vh'
+          mb="50"
+        >
+          <Heading
+            variant={{ base: "h5", md: "h4" }}
+            color={{ base: "primary", md: "primary" }}
+            textAlign="center"
+            w="full"
+            mb="7"
+            px='10'
           >
-            <Heading
-              variant={{ base: "h5", md: "h4" }}
-              color={{ base: "primary", md: "primary" }}
-              textAlign="left"
-              ml="24.5%"
-              mb="5"
-            >
-              Sign in
-            </Heading>
+            Welcome back!
+          </Heading>
 
-            <FormControl textAlign="left" ml="25%" mb="5">
-              <FormLabel fontSize={{ base: "12px", md: "16px" }}>Email</FormLabel>
+          <form onSubmit={loginHandler}>
+            <InputField
+              type="email"
+              name="Email"
+              label="Email"
+              placeholder="email@mail.com"
+              onChange={(event) => setEmail(event.target.value)}
+              helperText="Please enter your email" />
 
-              <Input
-                type="email"
-                w="50%"
-                boxShadow="inner"
-                fontSize={{ base: "12px", md: "14px", lg: "16px" }} />
+            <InputField
+              type="password"
+              name="Password"
+              label="Password"
+              placeholder="Password"
+              onChange={(event) => setPassword(event.target.value)}
+              helperText="Please enter your password" />
 
-              <FormHelperText hidden={true}>
-                Please enter your email
-              </FormHelperText>
-            </FormControl>
+            <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
+              <Button type='submit' w='50%' mr='5' ml='5'>
+                LOG IN
+              </Button>
+            </Center>
+          </form>
 
-            <FormControl textAlign="left" ml="25%" mb="10">
-              <FormLabel fontSize={{ base: "12px", md: "16px" }}>
-                Password
-              </FormLabel>
-
-              <Input
-                type="password"
-                w="50%"
-                boxShadow="inner"
-                fontSize={{ base: "12px", md: "14px", lg: "16px" }} />
-
-              <FormHelperText hidden={true}>
-                Please enter your password
-              </FormHelperText>
-            </FormControl>
-
-            <Stack justify="center" spacing="4">
-              <Text as="div" textAlign="left">
-                <Center fontSize={{ base: "10px", md: "14px" }} mb="1.5">
-                  <Link color="primary" variant="link" mr="10" ml="5" href="/forgot-password">
-                    Forgot password
-                  </Link>
-                  <Button mr="5" ml="5" onClick={() => signIn()}>
-                    LOG IN
-                  </Button>
-                </Center>
-                <br />
-                <Center mb="3" fontSize={{ base: "10px", md: "14px" }}>
-                  <span> Don&lsquo;t have an account? &nbsp;</span>
-                  <Link color="primary" variant="link" href="/register">
-                    Sign up
-                  </Link>
-                </Center>
-              </Text>
-            </Stack>
-          </Box>
-        </VStack>
+          <Stack justify="center" spacing="4">
+            <Text as="div" textAlign="left">
+              <Center fontSize={{ base: '10px', md: '14px' }} mb='1.5'>
+                <Link color="primary" variant="link">
+                  Forgot password
+                </Link>
+              </Center>
+              <Center mb="3" fontSize={{ base: "10px", md: "14px" }}>
+                <span> Don&lsquo;t have an account? &nbsp;</span>
+                <Link color="primary" variant="link" href="/register">
+                  Sign up
+                </Link>
+              </Center>
+            </Text>
+          </Stack>
+        </Card>
       </Center>
     </>
   );
