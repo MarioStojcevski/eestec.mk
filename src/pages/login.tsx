@@ -20,7 +20,9 @@ const Login = () => {
 
   return (
     <>
-      <Header /><Center bg="white">
+      <Header />
+      
+      <Center bg="white">
         <VStack w={{ base: "90%", md: "55%", lg: "40%" }} mb="200">
           <Center mb="50"></Center>
           <Box
