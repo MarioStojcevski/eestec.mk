@@ -192,7 +192,7 @@ const Register = () => {
               <span> Already have an account? &nbsp;</span>
               {/*in href, the link to the login section should be placed -> (https://eestec.mk/login) */}
               <Link
-                href="https://eestec.mk/contactus/"
+                href="/login"
                 color="primary"
                 variant="link"
               >

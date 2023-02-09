@@ -8,8 +8,8 @@ import {
   Card
 } from "@chakra-ui/react";
 import React, { useState } from 'react';
-import Field from "../components/field";
 import Header from "../components/shared/header";
+import InputField from "../components/shared/input-field";
 
 const Login = () =>{
   const [email, setEmail] = useState('');
@@ -46,7 +46,7 @@ const Login = () =>{
           </Heading>
 
           <form onSubmit={loginHandler}>
-            <Field
+            <InputField
               type="email"
               name="Email"
               label="Email"
@@ -54,7 +54,7 @@ const Login = () =>{
               onChange={(event) => setEmail(event.target.value)}
               helperText="Please enter your email" />
 
-            <Field
+            <InputField
               type="password"
               name="Password"
               label="Password"
@@ -78,7 +78,7 @@ const Login = () =>{
               </Center>
               <Center mb="3" fontSize={{ base: "10px", md: "14px" }}>
                 <span> Don&lsquo;t have an account? &nbsp;</span>
-                <Link color="primary" variant="link">
+                <Link color="primary" variant="link" href="/register">
                   Sign up
                 </Link>
               </Center>
