@@ -3,6 +3,7 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { Flex, Text, IconButton, Link, useDisclosure } from "@chakra-ui/react";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
+import router from "next/router";
 
 const Header = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -55,10 +56,12 @@ const Header = () => {
       </Flex>
       <Flex width="33.33%" justifyContent="center">
         <Image
+          onClick={() => router.push("/")}
           src="/images/eestec-logo.png"
           width={100}
           height={100}
           alt="eestec lc skopje"
+          style={{cursor: "pointer"}}
         />
       </Flex>
       <Flex width="33.33%" justifyContent="flex-end">

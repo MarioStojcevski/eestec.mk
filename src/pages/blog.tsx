@@ -1,8 +1,10 @@
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import Header from "../components/shared/header";
 
 const Blog = () => {
   return (
     <>
+      <Header />
       <Flex
         width="100vw"
         height="100vh"
