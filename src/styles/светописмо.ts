@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { ButtonStyles } from "./components/button-styles";
+import { CardStyles } from "./components/card-styles";
 import { HeadingStyles } from "./components/heading-styles";
 import { TextStyles } from "./components/text-styles";
 
@@ -23,5 +24,6 @@ export const светописмо = extendTheme({
     Button: { ...ButtonStyles },
     Heading: { ...HeadingStyles },
     Text: { ...TextStyles },
+    Card: { ...CardStyles}
   },
 });
