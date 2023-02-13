@@ -32,7 +32,8 @@ export default function ResetPasswordForm(): JSX.Element {
               src="/images/icon_padlock.png"
               alt=""
               width={100}
-              height={110} />
+              height={110}
+            />
             <Heading textAlign="center" textTransform="capitalize" variant="h1">
               reset your password
             </Heading>

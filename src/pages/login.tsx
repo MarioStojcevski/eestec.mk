@@ -5,24 +5,24 @@ import {
   Center,
   Link,
   Heading,
-  Card
+  Card,
 } from "@chakra-ui/react";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Header from "../components/shared/header";
 import InputField from "../components/shared/input-field";
 
-const Login = () =>{
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const loginHandler = (event: { preventDefault: () => void; }) => {
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const loginHandler = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     console.log(`Email: ${email}\nPassword: ${password}`);
-  }
+  };
 
   return (
     <>
       <Header />
-      
+
       <Center bg="white" mt={5}>
         <Card
           boxShadow="dark-lg"
@@ -31,7 +31,7 @@ const Login = () =>{
           borderColor="primary"
           p="6"
           rounded="lg"
-          w='80vh'
+          w="80vh"
           mb="50"
         >
           <Heading
@@ -40,7 +40,7 @@ const Login = () =>{
             textAlign="center"
             w="full"
             mb="7"
-            px='10'
+            px="10"
           >
             Welcome back!
           </Heading>
@@ -52,7 +52,8 @@ const Login = () =>{
               label="Email"
               placeholder="email@mail.com"
               onChange={(event) => setEmail(event.target.value)}
-              helperText="Please enter your email" />
+              helperText="Please enter your email"
+            />
 
             <InputField
               type="password"
@@ -60,10 +61,11 @@ const Login = () =>{
               label="Password"
               placeholder="Password"
               onChange={(event) => setPassword(event.target.value)}
-              helperText="Please enter your password" />
+              helperText="Please enter your password"
+            />
 
             <Center fontSize={{ base: "10px", md: "14px" }} mb="5">
-              <Button type='submit' w='50%' mr='5' ml='5'>
+              <Button type="submit" w="50%" mr="5" ml="5">
                 LOG IN
               </Button>
             </Center>
@@ -71,8 +73,8 @@ const Login = () =>{
 
           <Stack justify="center" spacing="4">
             <Text as="div" textAlign="left">
-              <Center fontSize={{ base: '10px', md: '14px' }} mb='1.5'>
-                <Link color="primary" variant="link">
+              <Center fontSize={{ base: "10px", md: "14px" }} mb="1.5">
+                <Link color="primary" variant="link" href="/forgot-password">
                   Forgot password
                 </Link>
               </Center>
