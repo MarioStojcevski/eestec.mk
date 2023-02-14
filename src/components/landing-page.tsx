@@ -29,7 +29,7 @@ const LandingPage = () => {
               <Image
                 width={500}
                 height={500}
-                src="/images/mk-map-new.png"
+                src="/images/mk-map.svg"
                 alt="eestec map"
               />
 
