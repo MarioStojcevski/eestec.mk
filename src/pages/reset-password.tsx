@@ -12,10 +12,17 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Header from "../components/shared/header";
+import Head from "next/head";
 
 export default function ResetPasswordForm(): JSX.Element {
   return (
     <>
+      <Head>
+        <title>| Reset Password</title>
+        <meta name="description" content="EESTEC MK Reset Password Page" />
+        <link rel="icon" href="/eestec.ico" />
+      </Head>
+
       <Header />
       <Flex minH={"80vh"} align={"center"} justify={"center"} mt={5}>
         <Card

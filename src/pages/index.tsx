@@ -10,6 +10,7 @@ import MissionVision from "../components/mission-vision";
 import Partners from "../components/partners";
 import Statistics from "../components/statistics";
 import WhyYouShouldJoin from "../components/why-you-should-join";
+import Head from "next/head";
 
 const Home = () => {
   const { data: session } = useSession();
@@ -17,6 +18,12 @@ const Home = () => {
 
   return (
     <>
+      <Head>
+        <title>| Home</title>
+        <meta name="description" content="EESTEC MK Home Page" />
+        <link rel="icon" href="/eestec.ico" />
+      </Head>
+
       <LandingPage />
       <MissionVision />
 

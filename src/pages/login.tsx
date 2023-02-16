@@ -10,6 +10,7 @@ import {
 import React, { useState } from "react";
 import Header from "../components/shared/header";
 import InputField from "../components/shared/input-field";
+import Head from "next/head";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,6 +22,12 @@ const Login = () => {
 
   return (
     <>
+      <Head>
+        <title>| Login</title>
+        <meta name="description" content="EESTEC MK Login Page" />
+        <link rel="icon" href="/eestec.ico" />
+      </Head>
+
       <Header />
 
       <Center bg="white" mt={5}>

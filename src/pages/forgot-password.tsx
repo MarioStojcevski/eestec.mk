@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/shared/header";
+import Head from "next/head";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +24,11 @@ const ForgotPassword = () => {
 
   return (
     <>
+      <Head>
+        <title>| Forgot Password</title>
+        <meta name="description" content="EESTEC MK Forgot Password Page" />
+        <link rel="icon" href="/eestec.ico" />
+      </Head>
       <Header />
 
       <Center bg="white" mt={5}>

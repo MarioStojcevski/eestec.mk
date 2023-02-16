@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/shared/header";
+import Head from "next/head";
 
 {
   /*   1. NOT RESPONSIVE! -> to use padding instead of margins
@@ -39,6 +40,12 @@ const Register = () => {
 
   return (
     <>
+      <Head>
+        <title>| Register</title>
+        <meta name="description" content="EESTEC MK Register Page" />
+        <link rel="icon" href="/eestec.ico" />
+      </Head>
+
       <Header />
 
       <Center bg="white" mt={5}>
