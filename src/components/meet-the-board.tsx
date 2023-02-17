@@ -2,7 +2,6 @@ import {
   Box,
   Stack,
   HStack,
-  Image,
   Heading,
   Center,
   Circle,
@@ -14,30 +13,35 @@ const MeetTheBoard = () => {
       id: 1,
       name: "Bojan Mladenovski",
       position: "Chairperson",
+      email: "test1@gmail.com",
       imageUrl: "/images/board/bojan.jpeg",
     },
     {
       id: 2,
       name: "Kristina Mladenova",
       position: "Contact Person",
+      email: "test2@gmail.com",
       imageUrl: "/images/board/kristina.jpeg",
     },
     {
       id: 3,
       name: "Andrea Lapevska",
       position: "PR Coordinator",
+      email: "test3@gmail.com",
       imageUrl: "/images/board/andrea.jpeg",
     },
     {
       id: 4,
       name: "Ivana Atanasoska",
       position: "HR Coordinator",
+      email: "test4@gmail.com",
       imageUrl: "/images/board/ivana.jpeg",
     },
     {
       id: 5,
       name: "Mario Stojcevski",
       position: "IT Coordinator",
+      email: "test5@gmail.com",
       imageUrl: "/images/board/mario.jpeg",
     },
   ];
@@ -64,6 +68,9 @@ const MeetTheBoard = () => {
             </Center>
             <Center>
               <Heading variant="h4">{boardMember.position}</Heading>
+            </Center>
+            <Center>
+              <Heading variant="h5  ">{boardMember.email}</Heading>
             </Center>
           </Stack>
         ))}
