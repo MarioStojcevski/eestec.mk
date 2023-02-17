@@ -5,6 +5,8 @@ import { SessionProvider } from "next-auth/react";
 import { светописмо } from "../styles/светописмо";
 import { ReactElement, ReactNode } from "react";
 import { NextPage } from "next";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
