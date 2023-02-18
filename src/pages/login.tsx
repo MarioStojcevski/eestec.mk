@@ -17,14 +17,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const loginHandler = (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    console.log(`Email: ${email}\nPassword: ${password}`);
   };
 
   return (
     <>
       <Head>
         <title>| Login</title>
-        <meta name="description" content="EESTEC MK Login Page" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
 

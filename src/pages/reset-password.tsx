@@ -19,7 +19,6 @@ export default function ResetPasswordForm(): JSX.Element {
     <>
       <Head>
         <title>| Reset Password</title>
-        <meta name="description" content="EESTEC MK Reset Password Page" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
 

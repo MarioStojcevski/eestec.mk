@@ -26,9 +26,9 @@ const ForgotPassword = () => {
     <>
       <Head>
         <title>| Forgot Password</title>
-        <meta name="description" content="EESTEC MK Forgot Password Page" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
       <Header />
 
       <Center bg="white" mt={5}>

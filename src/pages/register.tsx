@@ -33,16 +33,12 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const registerHandler = (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    console.log(
-      `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPassword: ${password}\nConfirm Password: ${confirmPassword}`
-    );
   };
 
   return (
     <>
       <Head>
         <title>| Register</title>
-        <meta name="description" content="EESTEC MK Register Page" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
 

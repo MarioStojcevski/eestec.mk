@@ -7,7 +7,6 @@ const Blog = () => {
     <>
       <Head>
         <title>| Blog</title>
-        <meta name="description" content="EESTEC MK Blog" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
 

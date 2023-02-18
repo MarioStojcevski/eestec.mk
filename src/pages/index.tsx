@@ -20,7 +20,6 @@ const Home = () => {
     <>
       <Head>
         <title>| Home</title>
-        <meta name="description" content="EESTEC MK Home Page" />
         <link rel="icon" href="/eestec.ico" />
       </Head>
 
