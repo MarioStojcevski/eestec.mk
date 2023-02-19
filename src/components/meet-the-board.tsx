@@ -5,6 +5,7 @@ import {
   Heading,
   Center,
   Circle,
+  Text
 } from "@chakra-ui/react";
 
 const MeetTheBoard = () => {
@@ -70,7 +71,7 @@ const MeetTheBoard = () => {
               <Heading variant="h4">{boardMember.position}</Heading>
             </Center>
             <Center>
-              <Heading variant="h5  ">{boardMember.email}</Heading>
+              <Text>{boardMember.email}</Text>
             </Center>
           </Stack>
         ))}
