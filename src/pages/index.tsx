@@ -11,6 +11,7 @@ import Partners from "../components/partners";
 import Statistics from "../components/statistics";
 import WhyYouShouldJoin from "../components/why-you-should-join";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const Home = () => {
   const { data: session } = useSession();
@@ -19,9 +20,19 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>| Home</title>
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
+      <NextSeo
+        title="| Home"
+        description="EESTEC MK Home"
+        openGraph={{
+          url: "https://eestec.mk/",
+          type: "homepage/website",
+          locale: "mk_MK",
+          site_name: "EESTEC MK Home",
+        }}
+      />
 
       <LandingPage />
       <MissionVision />

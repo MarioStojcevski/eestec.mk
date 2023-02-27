@@ -13,14 +13,25 @@ import {
 import React from "react";
 import Header from "../components/shared/header";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 export default function ResetPasswordForm(): JSX.Element {
   return (
     <>
       <Head>
-        <title>| Reset Password</title>
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
+      <NextSeo
+        title="| Reset Password"
+        description="EESTEC MK Reset Password"
+        openGraph={{
+          url: "https://eestec.mk/reset-password",
+          type: "website",
+          locale: "mk_MK",
+          site_name: "EESTEC MK Reset Password",
+        }}
+      />
 
       <Header />
       <Flex minH={"80vh"} align={"center"} justify={"center"} mt={5}>

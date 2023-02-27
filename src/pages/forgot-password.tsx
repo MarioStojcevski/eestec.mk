@@ -11,6 +11,7 @@ import {
   Card,
   chakra,
 } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 import React, { useState } from "react";
 import Header from "../components/shared/header";
 import Head from "next/head";
@@ -25,9 +26,19 @@ const ForgotPassword = () => {
   return (
     <>
       <Head>
-        <title>| Forgot Password</title>
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
+      <NextSeo
+        title="| Forgot Password"
+        description="EESTEC MK Forgot Password"
+        openGraph={{
+          url: "https://eestec.mk/forgot-password",
+          type: "website",
+          locale: "mk_MK",
+          site_name: "EESTEC MK Forgot Password",
+        }}
+      />
       
       <Header />
 

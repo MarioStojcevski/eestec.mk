@@ -16,6 +16,7 @@ import {
 import React, { useState } from "react";
 import Header from "../components/shared/header";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 {
   /*   1. NOT RESPONSIVE! -> to use padding instead of margins
@@ -38,9 +39,19 @@ const Register = () => {
   return (
     <>
       <Head>
-        <title>| Register</title>
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
+      <NextSeo
+        title="| Register"
+        description="EESTEC MK Register"
+        openGraph={{
+          url: "https://eestec.mk/register",
+          type: "register/website",
+          locale: "mk_MK",
+          site_name: "EESTEC MK Register",
+        }}
+      />
 
       <Header />
 

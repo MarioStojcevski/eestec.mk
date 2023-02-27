@@ -11,6 +11,7 @@ import React, { useState } from "react";
 import Header from "../components/shared/header";
 import InputField from "../components/shared/input-field";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -22,9 +23,19 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>| Login</title>
         <link rel="icon" href="/eestec.ico" />
       </Head>
+      
+      <NextSeo
+        title="| Login"
+        description="EESTEC MK Login"
+        openGraph={{
+          url: "https://eestec.mk/login",
+          type: "login page/website",
+          locale: "mk_MK",
+          site_name: "EESTEC MK Login",
+        }}
+      />
 
       <Header />
 
