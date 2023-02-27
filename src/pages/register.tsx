@@ -15,7 +15,8 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/shared/header";
-import Head from "next/head";
+
+import { NextSeo } from "next-seo";
 
 {
   /*   1. NOT RESPONSIVE! -> to use padding instead of margins
@@ -26,6 +27,18 @@ import Head from "next/head";
 }
 
 const Register = () => {
+
+  const SEO = {
+    title: "Register",
+    description: "EESTEC MK Register",
+    openGraph: {
+      url: "https://eestec.mk/register",
+      type: "register/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Register",
+    },
+  };
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,10 +50,7 @@ const Register = () => {
 
   return (
     <>
-      <Head>
-        <title>| Register</title>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
+      <NextSeo {...SEO} />
 
       <Header />
 

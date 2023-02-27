@@ -1,14 +1,24 @@
 import { Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Header from "../components/shared/header";
-import Head from "next/head";
+
+import { NextSeo } from 'next-seo';
 
 const Blog = () => {
+
+  const SEO = {
+    title: "Blog",
+    description: "EESTEC MK Blog",
+    openGraph: {
+      url: "https://eestec.mk/blog",
+      type: "blog/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Blog",
+    }
+  }
+
   return (
     <>
-      <Head>
-        <title>| Blog</title>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
+      <NextSeo {...SEO} />
 
       <Header />
       <Flex

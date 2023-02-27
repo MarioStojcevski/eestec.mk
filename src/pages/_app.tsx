@@ -6,6 +6,9 @@ import { светописмо } from "../styles/светописмо";
 import { ReactElement, ReactNode } from "react";
 import { NextPage } from "next";
 
+import { DefaultSeo } from 'next-seo';
+import SEO from "../../next-seo.config";
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -20,6 +23,7 @@ export default function App({ Component, pageProps: { session, ...pageProps }}: 
   return (
     <ChakraProvider resetCSS theme={светописмо}>
         <SessionProvider session={session}>
+            <DefaultSeo {...SEO} />
           {getLayout(<Component {...pageProps} />)}
         </SessionProvider>
     </ChakraProvider>
