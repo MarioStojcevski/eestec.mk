@@ -16,22 +16,25 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 export default function ResetPasswordForm(): JSX.Element {
+  
+  const SEO = {
+    title: "Reset Password",
+    description: "EESTEC MK Reset Password",
+    openGraph: {
+      url: "https://eestec.mk/reset-password",
+      type: "website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Reset Password",
+    },
+  };
+
   return (
     <>
       <Head>
         <link rel="icon" href="/eestec.ico" />
       </Head>
-      
-      <NextSeo
-        title="| Reset Password"
-        description="EESTEC MK Reset Password"
-        openGraph={{
-          url: "https://eestec.mk/reset-password",
-          type: "website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Reset Password",
-        }}
-      />
+
+      <NextSeo {...SEO} />
 
       <Header />
       <Flex minH={"80vh"} align={"center"} justify={"center"} mt={5}>

@@ -1,11 +1,13 @@
 import "../styles/globals.css";
-import { NextSeo } from 'next-seo';
 import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import { SessionProvider } from "next-auth/react";
 import { светописмо } from "../styles/светописмо";
 import { ReactElement, ReactNode } from "react";
 import { NextPage } from "next";
+import { DefaultSeo } from 'next-seo';
+
+import SEO from "../../next-seo.config";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -21,16 +23,7 @@ export default function App({ Component, pageProps: { session, ...pageProps }}: 
   return (
     <ChakraProvider resetCSS theme={светописмо}>
         <SessionProvider session={session}>
-          <NextSeo
-            title="EESTEC MK"
-            description="EESTEC MK Website" 
-            openGraph={{
-              url: "https://eestec.mk/",
-              type: "website",
-              locale: "mk_MK",
-              site_name: "EESTEC MK",
-            }}
-          />
+            <DefaultSeo {...SEO} />
           {getLayout(<Component {...pageProps} />)}
         </SessionProvider>
     </ChakraProvider>

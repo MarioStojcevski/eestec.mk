@@ -14,6 +14,18 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 const Home = () => {
+  
+  const SEO = {
+    title: "Home",
+    description: "EESTEC MK Home",
+    openGraph: {
+      url: "https://eestec.mk/",
+      type: "homepage/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Home",
+    }
+  }
+
   const { data: session } = useSession();
   console.log(session);
 
@@ -23,16 +35,7 @@ const Home = () => {
         <link rel="icon" href="/eestec.ico" />
       </Head>
       
-      <NextSeo
-        title="| Home"
-        description="EESTEC MK Home"
-        openGraph={{
-          url: "https://eestec.mk/",
-          type: "homepage/website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Home",
-        }}
-      />
+      <NextSeo {...SEO} />
 
       <LandingPage />
       <MissionVision />

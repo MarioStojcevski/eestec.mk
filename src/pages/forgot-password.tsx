@@ -17,28 +17,32 @@ import Header from "../components/shared/header";
 import Head from "next/head";
 
 const ForgotPassword = () => {
+  
+  const SEO = {
+    title: "Forgot Password",
+    description: "EESTEC MK Forgot Password",
+    openGraph: {
+      url: "https://eestec.mk/forgot-password",
+      type: "website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Forgot Password",
+    }
+  }
+
   const [email, setEmail] = useState("");
   const registerHandler = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     console.log(`Email: ${email}`);
   };
 
+
   return (
     <>
       <Head>
         <link rel="icon" href="/eestec.ico" />
       </Head>
-      
-      <NextSeo
-        title="| Forgot Password"
-        description="EESTEC MK Forgot Password"
-        openGraph={{
-          url: "https://eestec.mk/forgot-password",
-          type: "website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Forgot Password",
-        }}
-      />
+  
+      <NextSeo {...SEO} />
       
       <Header />
 

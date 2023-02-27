@@ -14,6 +14,18 @@ import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 const Login = () => {
+
+  const SEO = {
+    title: "Login",
+    description: "EESTEC MK Login",
+    openGraph: {
+      url: "https://eestec.mk/login",
+      type: "login page/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Login",
+    },
+  };
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const loginHandler = (event: { preventDefault: () => void }) => {
@@ -26,16 +38,7 @@ const Login = () => {
         <link rel="icon" href="/eestec.ico" />
       </Head>
       
-      <NextSeo
-        title="| Login"
-        description="EESTEC MK Login"
-        openGraph={{
-          url: "https://eestec.mk/login",
-          type: "login page/website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Login",
-        }}
-      />
+      <NextSeo {...SEO} />
 
       <Header />
 

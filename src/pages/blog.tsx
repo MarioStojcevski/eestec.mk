@@ -4,22 +4,25 @@ import Header from "../components/shared/header";
 import Head from "next/head";
 
 const Blog = () => {
+
+  const SEO = {
+    title: "Blog",
+    description: "EESTEC MK Blog",
+    openGraph: {
+      url: "https://eestec.mk/blog",
+      type: "blog/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Blog",
+    }
+  }
+
   return (
     <>
       <Head>
         <link rel="icon" href="/eestec.ico" />
       </Head>
       
-      <NextSeo
-        title="| Blog"
-        description="EESTEC MK Blog"
-        openGraph={{
-          url: "https://eestec.mk/blog",
-          type: "blog/website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Blog",
-        }}
-      />
+      <NextSeo {...SEO} />
 
       <Header />
       <Flex

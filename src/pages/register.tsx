@@ -27,6 +27,18 @@ import { NextSeo } from "next-seo";
 }
 
 const Register = () => {
+
+  const SEO = {
+    title: "Register",
+    description: "EESTEC MK Register",
+    openGraph: {
+      url: "https://eestec.mk/register",
+      type: "register/website",
+      locale: "mk_MK",
+      site_name: "EESTEC MK Register",
+    },
+  };
+
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -42,16 +54,7 @@ const Register = () => {
         <link rel="icon" href="/eestec.ico" />
       </Head>
       
-      <NextSeo
-        title="| Register"
-        description="EESTEC MK Register"
-        openGraph={{
-          url: "https://eestec.mk/register",
-          type: "register/website",
-          locale: "mk_MK",
-          site_name: "EESTEC MK Register",
-        }}
-      />
+      <NextSeo {...SEO} />
 
       <Header />
 
