@@ -10,7 +10,7 @@ import MissionVision from "../components/mission-vision";
 import Partners from "../components/partners";
 import Statistics from "../components/statistics";
 import WhyYouShouldJoin from "../components/why-you-should-join";
-import Head from "next/head";
+
 import { NextSeo } from "next-seo";
 
 const Home = () => {
@@ -21,6 +21,12 @@ const Home = () => {
     openGraph: {
       url: "https://eestec.mk/",
       type: "homepage/website",
+      // images: {
+      //  url: "https://eestec.mk/eestec.ico",
+      //  width: 800,
+      //  height: 600,
+      //  alt: "EESTEC MK Banner",
+      // },
       locale: "mk_MK",
       site_name: "EESTEC MK Home",
     }
@@ -31,10 +37,6 @@ const Home = () => {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
-      
       <NextSeo {...SEO} />
 
       <LandingPage />

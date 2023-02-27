@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Header from "../components/shared/header";
-import Head from "next/head";
+
 import { NextSeo } from "next-seo";
 
 {
@@ -50,10 +50,6 @@ const Register = () => {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
-      
       <NextSeo {...SEO} />
 
       <Header />

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Header from "../components/shared/header";
-import Head from "next/head";
+
 import { NextSeo } from "next-seo";
 
 export default function ResetPasswordForm(): JSX.Element {
@@ -30,10 +30,6 @@ export default function ResetPasswordForm(): JSX.Element {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
-
       <NextSeo {...SEO} />
 
       <Header />

@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import Header from "../components/shared/header";
 import InputField from "../components/shared/input-field";
-import Head from "next/head";
+
 import { NextSeo } from "next-seo";
 
 const Login = () => {
@@ -34,10 +34,6 @@ const Login = () => {
 
   return (
     <>
-      <Head>
-        <link rel="icon" href="/eestec.ico" />
-      </Head>
-      
       <NextSeo {...SEO} />
 
       <Header />
